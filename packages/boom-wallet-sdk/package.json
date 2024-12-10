@@ -1,12 +1,24 @@
 {
     "name": "boom-wallet-sdk",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/index.js",
     "types": "dist/types/index.d.ts",
     "module": "ESNext",
     "private": false,
     "scripts": {
-        "build": "rollup -c rollup.config.mjs"
+        "build": "rollup -c rollup.config.mjs",
+        "clean": "rm -rf dist",
+        "prepublishOnly": "npm run clean && npm run build",
+        "publish:patch": "npm version patch && npm publish",
+        "publish:minor": "npm version minor && npm publish",
+        "publish:major": "npm version major && npm publish"
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "publishConfig": {
+        "access": "public"
     },
     "dependencies": {
         "@privy-io/react-auth": "^1.95.4",
