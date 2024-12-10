@@ -75,6 +75,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                     // Create embedded wallets for users who don't have a wallet
                     embeddedWallets: {
                         createOnLogin: "all-users",
+                        showWalletUIs: false,
                         // createOnLogin: 'off',
                         // requireUserPasswordOnCreate: false,
                     },
