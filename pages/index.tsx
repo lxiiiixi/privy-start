@@ -5,8 +5,7 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import LoginModal from "../components/LoginModal";
 import { useState } from "react";
-// import { WalletConnectButton } from "boom-wallet-sdk/src";
-import { WalletConnectButton } from "boom-wallet-sdk";
+import { WalletConnectButton } from "boom-wallet-sdk/src";
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     const cookieAuthToken = req.cookies["privy-token"];
