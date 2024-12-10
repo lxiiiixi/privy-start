@@ -1,2 +1,2 @@
 packages:
-    - "boom-wallet-sdk"
+    - "packages/*"

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Modal from "./Modal";
-import { useLoginWithEmail, usePrivy } from "@privy-io/react-auth";
+import { useLoginWithEmail } from "@privy-io/react-auth";
 import { useRouter } from "next/router";
 
 interface Wallet {
@@ -16,7 +16,6 @@ const wallets: Wallet[] = [
 
 export default function LoginModal({ isOpen, onClose }: { isOpen: boolean; onClose: () => void }) {
     const router = useRouter();
-    const { login } = usePrivy();
 
     // https://docs.privy.io/guide/expo/authentication/email
     const {
@@ -41,7 +40,7 @@ export default function LoginModal({ isOpen, onClose }: { isOpen: boolean; onClo
     // Email Local State
     const [email, setEmail] = useState("");
     const [codeEmail, setCodeEmail] = useState("");
-    const [emailState, setEmailState] = useState(stateEmail.status as string);
+    const [emailState] = useState(stateEmail.status as string);
 
     const onSelectWallet = (wallet: Wallet) => {
         console.log("Selected wallet:", wallet);

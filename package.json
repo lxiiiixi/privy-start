@@ -17,6 +17,7 @@
     "@privy-io/react-auth": "1.95.4",
     "@privy-io/server-auth": "1.16.8",
     "@tailwindcss/forms": "^0.5.3",
+    "boom-wallet-sdk": "workspace:*",
     "next": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0"
