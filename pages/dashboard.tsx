@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getAccessToken, useSolanaWallets } from "@privy-io/react-auth";
 import Head from "next/head";
-import { useBoomWallet } from "boom-wallet-sdk";
+import { useBoomWallet } from "boom-wallet-sdk/src";
 
 async function verifyToken() {
     const url = "/api/verify";
@@ -48,17 +48,6 @@ export default function DashboardPage() {
             router.push("/");
         }
     }, [ready, authenticated, router]);
-
-    const numAccounts = user?.linkedAccounts?.length || 0;
-    const canRemoveAccount = numAccounts > 1;
-
-    const email = user?.email;
-    const phone = user?.phone;
-    const wallet = user?.wallet;
-
-    const googleSubject = user?.google?.subject || null;
-    const twitterSubject = user?.twitter?.subject || null;
-    const discordSubject = user?.discord?.subject || null;
 
     return (
         <>

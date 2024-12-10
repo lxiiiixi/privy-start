@@ -10,8 +10,8 @@
         "outDir": "./dist",
         "allowSyntheticDefaultImports": true,
         "skipLibCheck": true,
-        "checkJs": false  
+        "checkJs": false
     },
-    "include": ["src"]
+    "include": ["src", "src/index.ts"]
 }
   

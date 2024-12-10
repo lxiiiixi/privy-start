@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import Navbar from "./navbar";
 import type { NavbarItem } from "./navbar";
 import { useRouter } from "next/router";
-import { useBoomWallet } from "boom-wallet-sdk";
+import { useBoomWallet } from "boom-wallet-sdk/src";
 
 type Props = {
     children?: React.ReactNode;

@@ -4,9 +4,6 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-overrides:
-  svix: 1.42.0
-
 importers:
 
   .:
@@ -92,7 +89,7 @@ importers:
         specifier: ^18.2.0
         version: 18.2.0
       typescript:
-        specifier: ^5.1.6
+        specifier: ^5.7.2
         version: 5.7.2
 
 packages:

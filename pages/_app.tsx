@@ -1,7 +1,7 @@
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { BoomWalletProvider } from "boom-wallet-sdk";
+import { BoomWalletProvider } from "boom-wallet-sdk/src";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
@@ -40,7 +40,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 <title>Privy Auth Starter</title>
                 <meta name="description" content="Privy Auth Starter" />
             </Head>
-            <BoomWalletProvider>
+            <BoomWalletProvider appId={process.env.NEXT_PUBLIC_PRIVY_APP_ID || ""}>
                 <Component {...pageProps} />
             </BoomWalletProvider>
         </>

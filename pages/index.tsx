@@ -5,6 +5,8 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import LoginModal from "../components/LoginModal";
 import { useState } from "react";
+// import { WalletConnectButton } from "boom-wallet-sdk/src";
+import { WalletConnectButton } from "boom-wallet-sdk";
 
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
     const cookieAuthToken = req.cookies["privy-token"];
@@ -63,12 +65,7 @@ export default function LoginPage() {
                 <div className="flex bg-privy-light-blue flex-1 p-6 justify-center items-center">
                     <div>
                         <div className="mt-6 flex justify-center text-center gap-4">
-                            <button
-                                className="bg-violet-600 hover:bg-violet-700 py-3 px-6 text-white rounded-lg"
-                                onClick={login}
-                            >
-                                Log in
-                            </button>
+                            <WalletConnectButton onComplete={() => router.push("/dashboard")} />
 
                             <button
                                 className="bg-violet-600 hover:bg-violet-700 py-3 px-6 text-white rounded-lg"
