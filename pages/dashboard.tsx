@@ -2,7 +2,7 @@ import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { getAccessToken, useSolanaWallets } from "@privy-io/react-auth";
 import Head from "next/head";
-import { useBoomWallet } from "boom-wallet-sdk/src";
+import { useBoomWallet } from "boom-wallet-sdk";
 
 async function verifyToken() {
     const url = "/api/verify";

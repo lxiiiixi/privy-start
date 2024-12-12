@@ -1,7 +1,7 @@
+import { BoomWalletProvider } from "boom-wallet-sdk";
 import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import { BoomWalletProvider } from "boom-wallet-sdk/src";
 
 function MyApp({ Component, pageProps }: AppProps) {
     return (
